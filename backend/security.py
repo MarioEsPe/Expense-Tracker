@@ -7,7 +7,7 @@ from pydantic import BaseModel
 # --- 1. Configuración de Hashing (Passlib) ---
 
 # Definimos el contexto de hashing. Usaremos bcrypt.
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+pwd_context = CryptContext(schemes=["argon2"], deprecated="auto")
 
 # Función para "hashear" una contraseña
 def hash_password(password: str) -> str:
